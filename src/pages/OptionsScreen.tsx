@@ -12,7 +12,7 @@ interface OptionsScreenProps {
   onAddMore?: () => void
 }
 
-export const OptionsScreen: React.FC<OptionsScreenProps> = ({ onNext, onBack, onAddMore }) => {
+export const OptionsScreen: React.FC<OptionsScreenProps> = ({ onBack, onAddMore }) => {
   const { selectedMenuItem, selectedMenuItems, addToCart, updateCartItem, editingCartIndex, setSelectedMenuItem, setSelectedMenuItems, cart } = useOrder()
 
   const isEditMode = editingCartIndex !== null
@@ -72,31 +72,6 @@ export const OptionsScreen: React.FC<OptionsScreenProps> = ({ onNext, onBack, on
           onAddMore?.()
         }
       }, 1500)
-    }
-  }
-
-  const handleAddMore = () => {
-    addToCart({
-      menuItem: selectedMenuItem,
-      selectedDrink,
-      selectedSide,
-      quantity: 1
-    })
-
-    // 남은 메뉴가 있는지 확인
-    const remainingMenus = selectedMenuItems.filter(m => m.id !== selectedMenuItem.id)
-
-    if (remainingMenus.length > 0) {
-      // 다음 메뉴로 자동 이동
-      setSelectedMenuItem(remainingMenus[0])
-      setSelectedDrink('drink-cola')
-      setSelectedSide('side-fries')
-    } else {
-      // 남은 메뉴가 없으면 MenuScreen으로 돌아감
-      setSelectedMenuItem(null)
-      if (onAddMore) {
-        onAddMore()
-      }
     }
   }
 
