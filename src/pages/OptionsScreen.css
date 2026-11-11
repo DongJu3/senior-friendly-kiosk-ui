@@ -1,0 +1,244 @@
+.options-screen {
+  width: 100%;
+  height: 100%;
+  background-color: #F5F5F5;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.options-breadcrumb {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 20px 40px;
+  background-color: #F5F5F5;
+}
+
+.breadcrumb-item {
+  text-align: center;
+  font-size: 22px;
+  color: #999;
+  padding: 15px;
+  background-color: #E8E8E8;
+  border-radius: 8px;
+}
+
+.breadcrumb-item.active {
+  background-color: #F5E6E8;
+  color: #C41E3A;
+  font-weight: 700;
+}
+
+.breadcrumb-item.active-current {
+  background-color: #C41E3A;
+  color: white;
+  font-weight: 700;
+}
+
+.breadcrumb-check {
+  margin-right: 8px;
+}
+
+.options-order-type {
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F5E6E8;
+  font-size: 20px;
+}
+
+.options-order-label {
+  color: #666;
+}
+
+.options-order-value {
+  color: #C41E3A;
+  font-weight: 700;
+}
+
+.options-content {
+  flex: 1;
+  padding: 30px 40px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.options-title {
+  font-size: calc(56px * var(--text-scale));
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 15px 0;
+}
+
+.options-subtitle {
+  font-size: 24px;
+  color: #666;
+  margin: 0 0 30px 0;
+}
+
+.selected-menu-box {
+  background-color: white;
+  border: 2px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 25px;
+  margin-bottom: 30px;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.selected-menu-image {
+  width: 120px;
+  height: 120px;
+  background-color: #F5E6E8;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #C41E3A;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.selected-menu-info {
+  flex: 1;
+}
+
+.selected-menu-name {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.selected-menu-price {
+  font-size: 24px;
+  color: #666;
+}
+
+.options-section {
+  margin-bottom: 30px;
+}
+
+.options-section-title {
+  font-size: 40px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 20px 0;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.option-card {
+  background-color: white;
+  border: 3px solid #E8E8E8;
+  border-radius: 12px;
+  padding: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  text-align: center;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.option-card.selected {
+  border-color: #C41E3A;
+  background-color: #FFF5F5;
+}
+
+.option-card:hover {
+  border-color: #C41E3A;
+  transform: translateY(-3px);
+}
+
+.option-card-check {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 36px;
+  height: 36px;
+  background-color: #C41E3A;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.option-card-label {
+  font-size: 32px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.option-card-info {
+  font-size: 22px;
+  color: #666;
+}
+
+.current-selection-box {
+  background-color: #FFF5F5;
+  border: 3px solid #C41E3A;
+  border-radius: 12px;
+  padding: 30px;
+  margin-top: 20px;
+}
+
+.current-selection-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #C41E3A;
+  margin-bottom: 20px;
+}
+
+.current-selection-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 0;
+  border-bottom: 1px solid #F5E6E8;
+  font-size: 24px;
+}
+
+.current-selection-row:last-child {
+  border-bottom: none;
+}
+
+.current-selection-row span:first-child {
+  color: #666;
+}
+
+.current-selection-row span:last-child {
+  color: #333;
+  font-weight: 700;
+}
+
+.current-price {
+  font-size: 28px;
+  color: #C41E3A !important;
+}
+
+.options-footer {
+  display: flex;
+  gap: 15px;
+  padding: 20px 40px;
+  background-color: #F5F5F5;
+}
+
+.options-footer .btn {
+  flex: 1;
+}
